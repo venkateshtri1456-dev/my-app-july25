@@ -1,0 +1,28 @@
+.first{
+    color:green;
+    background-color: white;
+}
+
+.second{
+    color:violet;
+    background-color: white;
+}
+
+.third{
+    color:brown;
+    background-color: white;
+}
+
+button{
+    width:60px;
+    height:30px;
+    background-color: blue;
+    border-radius: 10px;
+}
+
+.sort{
+    width:100px;
+    height:40px;
+    background-color: blue;
+    border-radius: 10px;
+}

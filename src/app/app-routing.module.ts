@@ -12,6 +12,7 @@ import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 const routes: Routes = [
   {path:'', component:LoginComponent},    // default routing
@@ -26,6 +27,8 @@ const routes: Routes = [
      {path:'circle',component:CircleComponent},
      {path:'bmi',component:BmiComponent},
      {path:'directives',component:DirectivesComponent },
+     {path:'employee',component:EmployeeComponent },
+
   ]},  //parent routing
 
 

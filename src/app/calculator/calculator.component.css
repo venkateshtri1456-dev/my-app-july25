@@ -1,0 +1,40 @@
+.Calculator{
+    width:400px;
+    height:400px;
+    background-color: whitesmoke;
+    text-align: center;
+    margin-left: 100px;
+}
+span{
+    width:400px;
+    height:50px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    align-items: center;
+}
+.add1{
+    width:50px;
+    height:30px;
+    background-color: blue;
+
+}
+.sub1{
+    width:50px;
+    height:30px;
+    background-color: blue;
+
+}
+.mul1{
+    width:50px;
+    height:30px;
+    background-color: blue;
+
+}
+.div1{
+    width:50px;
+    height:30px;
+    background-color: blue;
+
+}

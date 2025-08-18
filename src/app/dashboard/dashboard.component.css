@@ -1,0 +1,19 @@
+.parent{
+    width:100vw;
+    height:100vh;
+    background-color: green;
+    display: flex;
+    
+
+}
+.left{
+    width:20%;
+    height:100%;
+    background-color: gray;
+    
+}
+.right{
+    width:80%;
+    height:100%;
+    background-color: antiquewhite;
+}

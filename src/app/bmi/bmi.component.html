@@ -1,0 +1,12 @@
+
+<div class="bmi" >
+<h2>BMI</h2>
+<h3>{{result}}</h3>
+<h3>{{result2}}</h3>
+
+<h3>weight</h3>
+<input type="number" [(ngModel)]="weight" placeholder="Enter weight in kg"><br>
+<h3>height</h3>
+<input type="number" [(ngModel)]="height"  placeholder="Enter height in mts"><br><br>
+<button (click)="bmi()" [disabled]="!weight ||!height" >Submit</button>
+</div>

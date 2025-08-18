@@ -16,6 +16,7 @@ import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { FormsModule } from '@angular/forms';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FormsModule } from '@angular/forms';
     CalculatorComponent,
     RectangleComponent,
     CircleComponent,
-    BmiComponent
+    BmiComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,

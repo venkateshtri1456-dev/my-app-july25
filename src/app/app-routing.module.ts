@@ -14,6 +14,8 @@ import { BmiComponent } from './bmi/bmi.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { ProductTaskComponent } from './product-task/product-task.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
+
 
 const routes: Routes = [
   {path:'', component:LoginComponent},    // default routing
@@ -31,6 +33,7 @@ const routes: Routes = [
      {path:'employee',component:EmployeeComponent },
      {path:'employee',component:EmployeeComponent },
      {path:'product-task',component:ProductTaskComponent },
+     {path:'vehicle',component:VehicleComponent },
 
   ]},  //parent routing
 

@@ -52,4 +52,10 @@ totalPrice(){
   alert(total);
 }
 
+nameSearch:string='';
+typing(){
+  this.products=this.products.filter((product:any)=>product.productname.includes(this.nameSearch));
+}
+
+
 }

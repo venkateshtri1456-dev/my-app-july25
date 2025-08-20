@@ -1,7 +1,7 @@
 <div class="parent">
     <div class="top">
         <div class="left">
-         <input  class="mt-4 ms-2" type="text "  placeholder="search">
+         <input  class="mt-4 ms-2" [(ngModel)]="nameSearch" (keyup)="typing()" type="text "  placeholder="search">
          <button class="btn btn-primary mt-1 ms-2" >Only for free delivery</button><br>
          <button class="btn btn-warning mt-3 ms-2" (click)="priceAscending()">Price low to high</button>
          <button class="btn btn-warning mt-3 ms-2" (click)="priceDescending()">Price hight to low</button>

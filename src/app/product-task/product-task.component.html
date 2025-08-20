@@ -1,0 +1,58 @@
+<div class="parent">
+    <div class="top">
+        <div class="left">
+         <input  class="mt-4 ms-2" type="text "  placeholder="search">
+         <button class="btn btn-primary mt-1 ms-2" >Only for free delivery</button><br>
+         <button class="btn btn-warning mt-3 ms-2" (click)="priceAscending()">Price low to high</button>
+         <button class="btn btn-warning mt-3 ms-2" (click)="priceDescending()">Price hight to low</button>
+         <button  class="btn btn-warning mt-3 ms-2" (click)="ratingAscending()">Rating low to high</button>
+         <button class="btn btn-warning mt-3 ms-2" (click)="ratingDescending()">Rating highto low</button><br>
+         <button class="btn btn-info mt-3 ms-2"  (click)="discount()">Apply 50% discount</button>
+         <button class="btn btn-info mt-3 ms-2" (click)="deliveryCharges()">Price with delivery charges</button><br>
+         <button class="btn btn-dark mt-3 ms-2" (click)="totalPrice()">Total price</button>
+         <button class="btn btn-dark mt-3 ms-2">Total card items</button>
+         </div>
+<div class="right">
+    <label class="mt-3  ms-2 mx-2"> Name:</label>
+    <input  class="mt-3 ms-2 mx-2" type="text" placeholder="Enter name"><br>
+     <label class="mt-3  ms-2 mx-2"> Price:</label>
+    <input  class="mt-3  ms-2 mx-2" type="text" placeholder="Enter price"><br>
+     <label class="mt-3  ms-2 mx-2"> Rating:</label>
+    <input class="mt-3  ms-2 mx-2" type="text" placeholder="Enter rating"><br>
+    <label class="mt-3  ms-2 mx-2" > free delivery</label>
+    <input class="mt-3  ms-2 " type="radio" name="free delivery">
+    <label class="mt-3  ms-2 " >Yes</label>
+    <input class="mt-3  ms-2 " type="radio" name="free delivery">
+    <label class="mt-3  ms-2 " >No</label><br>
+    <button class="btn btn-success mt-3 ms-2">Add to cart</button>
+
+   </div>
+ </div>
+
+    <div class="bottom">
+        <table border="1" class="table table-primary" >
+            <thead>
+                <tr >
+                    <td>S No</td>
+                    <td>Product Name</td>
+                    <td>Price</td>
+                    <td>Rating</td>
+                    <td>Free Delivery</td>
+                    <td>Actions</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products,let i=index">
+                    <td>{{product.sno}}</td>
+                    <td>{{product.productname}}</td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.rating}}</td>
+                    <td>{{product.freedelivery}}</td>
+<td>
+                <button class="btn btn-danger" (click)="delete(i)">Delete</button>
+            </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

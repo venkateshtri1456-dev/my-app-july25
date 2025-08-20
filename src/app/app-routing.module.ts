@@ -13,6 +13,7 @@ import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { ProductTaskComponent } from './product-task/product-task.component';
 
 const routes: Routes = [
   {path:'', component:LoginComponent},    // default routing
@@ -28,6 +29,8 @@ const routes: Routes = [
      {path:'bmi',component:BmiComponent},
      {path:'directives',component:DirectivesComponent },
      {path:'employee',component:EmployeeComponent },
+     {path:'employee',component:EmployeeComponent },
+     {path:'product-task',component:ProductTaskComponent },
 
   ]},  //parent routing
 

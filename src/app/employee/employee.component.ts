@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-employee',
@@ -30,6 +30,46 @@ export class EmployeeComponent {
 
   delete(index:number){
     this.employees.splice(index,1);
+  }
+
+  roleFilter:string='';  // 19/08/2025-topic-filter
+  filter(){
+    this.employees=this.employees.filter((employee:any)=>employee.role==this.roleFilter);
+  }
+
+  name:string='';
+
+  nameFilter(){
+    this.employees=this.employees.filter((employee:any)=>employee.name.includes(this.name));
+  }
+
+  bonus(){     
+    this.employees=this.employees.map((employee:any)=>{          // map-topic-19/08/2025
+      employee.package=employee.package+30000;
+      return employee;
+    });
+  }
+
+  //totalCost:number:0;
+  costToCompany(){
+    var totalCost=this.employees.reduce((sum:any,employee:any)=>sum+employee.package,0);
+    alert(totalCost);
+  }
+
+  empName:string='';
+  experience:number=0;
+  package:number=0;
+  role:string='';
+  addRecord(){
+    // console.log(this.name,this.experience,this.package,this.role);
+
+  var user={
+    name:this.empName,
+    experience:this.experience,
+    package:this.package,
+    role:this.role
+  }
+  this.employees.unshift(user);
   }
 
 }

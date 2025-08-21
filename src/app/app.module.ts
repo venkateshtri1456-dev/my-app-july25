@@ -21,6 +21,8 @@ import { EmployeeComponent } from './employee/employee.component';
 import { ProductTaskComponent } from './product-task/product-task.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MailComponent } from './mail/mail.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
 
 
 @NgModule({
@@ -41,7 +43,9 @@ import { HttpClientModule } from '@angular/common/http';
     DirectivesComponent,
     EmployeeComponent,
     ProductTaskComponent,
-    VehicleComponent
+    VehicleComponent,
+    MailComponent,
+    FlipkartComponent
   ],
   imports: [
     BrowserModule,

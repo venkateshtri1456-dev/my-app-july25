@@ -1,0 +1,36 @@
+ body{
+    margin:0;
+ }
+ 
+ .parent{
+    height:100%;
+    width:100%;
+     display:flex;
+    flex-wrap: wrap;
+    overflow: auto;
+     object-fit: cover; 
+    justify-content: space-evenly;
+
+} 
+.card{
+    width:300px;
+    height:380px;
+ margin: 10px 5px 10px 10px;
+ position: relative;
+ border: 1px solid aqua;
+ overflow: auto;
+
+
+}
+.rate{
+    width:90px;
+    height:35px;
+    color:grey;
+    position: absolute;
+    background-color: aqua;
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 190px;
+
+    
+}

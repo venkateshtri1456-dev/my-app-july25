@@ -1,0 +1,20 @@
+
+            <!-- <th>User ID</th> -->
+            <!-- ID
+            Tittle -->
+            <!-- <th>COmpleted</th> -->
+           <h1>Mail List</h1>
+       
+        <ol >
+ 
+            <!-- <td>{{mails.userId}}  </td> -->
+          <li *ngFor= "let mails of mail" [ngStyle]="{'color':mails.completed==true?'grey':'black'}">{{mails.completed}} 
+
+            <!-- {{mails.id}}   -->
+              <!-- {{mails.completed}}  -->
+            {{mails.title}}  
+           </li>
+                      
+
+</ol>
+     

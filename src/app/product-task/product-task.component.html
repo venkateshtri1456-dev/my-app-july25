@@ -14,17 +14,17 @@
          </div>
 <div class="right">
     <label class="mt-3  ms-2 mx-2"> Name:</label>
-    <input  class="mt-3 ms-2 mx-2" type="text" placeholder="Enter name"><br>
+    <input  class="mt-3 ms-2 mx-2" type="text" placeholder="Enter name" [(ngModel)]="names" ><br>
      <label class="mt-3  ms-2 mx-2"> Price:</label>
-    <input  class="mt-3  ms-2 mx-2" type="text" placeholder="Enter price"><br>
+    <input  class="mt-3  ms-2 mx-2" type="number" placeholder="Enter price"  [(ngModel)]="price" ><br>
      <label class="mt-3  ms-2 mx-2"> Rating:</label>
-    <input class="mt-3  ms-2 mx-2" type="text" placeholder="Enter rating"><br>
-    <label class="mt-3  ms-2 mx-2" > free delivery</label>
-    <input class="mt-3  ms-2 " type="radio" name="free delivery">
+    <input class="mt-3  ms-2 mx-2" type="number" placeholder="Enter rating" [(ngModel)]="rating" ><br>
+    <label class="mt-3  ms-2 mx-2" > free Delivery</label>
+    <input class="mt-3  ms-2 " type="radio" name="freedelivery" [(ngModel)]="freedelivery" [value]="true" >
     <label class="mt-3  ms-2 " >Yes</label>
-    <input class="mt-3  ms-2 " type="radio" name="free delivery">
+    <input class="mt-3  ms-2 " type="radio" name="freedelivery" [(ngModel)]="freedelivery" [value]="false">
     <label class="mt-3  ms-2 " >No</label><br>
-    <button class="btn btn-success mt-3 ms-2">Add to cart</button>
+    <button class="btn btn-success mt-3 ms-2" (click)="Record()" >Add to cart</button>
 
    </div>
  </div>
@@ -43,7 +43,7 @@
             </thead>
             <tbody>
                 <tr *ngFor="let product of products,let i=index">
-                    <td>{{product.sno}}</td>
+                   <td> {{i+1}}</td>
                     <td>{{product.productname}}</td>
                     <td>{{product.price}}</td>
                     <td>{{product.rating}}</td>

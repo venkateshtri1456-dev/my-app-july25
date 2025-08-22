@@ -15,7 +15,7 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { ProductTaskComponent } from './product-task/product-task.component';
@@ -23,6 +23,9 @@ import { VehicleComponent } from './vehicle/vehicle.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MailComponent } from './mail/mail.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
+import { PinInterestComponent } from './pin-interest/pin-interest.component';
+import { WeatherComponent } from './weather/weather.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 
 
 @NgModule({
@@ -45,13 +48,17 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
     ProductTaskComponent,
     VehicleComponent,
     MailComponent,
-    FlipkartComponent
+    FlipkartComponent,
+    PinInterestComponent,
+    WeatherComponent,
+    CreateVehicleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

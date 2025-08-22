@@ -17,6 +17,9 @@ import { ProductTaskComponent } from './product-task/product-task.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { MailComponent } from './mail/mail.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
+import { PinInterestComponent } from './pin-interest/pin-interest.component';
+import { WeatherComponent } from './weather/weather.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 
 
 const routes: Routes = [
@@ -38,6 +41,9 @@ const routes: Routes = [
      {path:'vehicle',component:VehicleComponent },
      {path:'mail',component:MailComponent },
      {path:'flipkart',component:FlipkartComponent },
+     {path:'pinInterest',component:PinInterestComponent },
+     {path:'weather',component:WeatherComponent },
+     {path:'create-vehicle',component:CreateVehicleComponent },
 
   ]},  //parent routing
 

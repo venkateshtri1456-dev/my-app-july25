@@ -1,0 +1,8 @@
+<div class="parent">
+    <div class="card" *ngFor="let pinterest of pinInterest">
+     <h5><img src="{{pinterest.download_url}}" alt=""></h5>
+     <h4 class="hover-text">{{pinterest.author}}</h4>
+     <!-- <button class="hover-btn" >download</button> -->
+      <a [href]="pinterest.download_url"  class="btn btn-primary">Download</a>
+    </div>
+ </div>

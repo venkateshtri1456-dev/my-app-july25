@@ -20,6 +20,11 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
 import { PinInterestComponent } from './pin-interest/pin-interest.component';
 import { WeatherComponent } from './weather/weather.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { IdCardComponent } from './id-card/id-card.component';
+import { AddStudentsComponent } from './add-students/add-students.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { CreateAccountDetailsComponent } from './create-account-details/create-account-details.component';
 
 
 const routes: Routes = [
@@ -44,6 +49,14 @@ const routes: Routes = [
      {path:'pinInterest',component:PinInterestComponent },
      {path:'weather',component:WeatherComponent },
      {path:'create-vehicle',component:CreateVehicleComponent },
+     {path:'idCard',component:IdCardComponent },
+     {path:'addStudents',component:AddStudentsComponent },
+     {path:'accountDetails',component:AccountDetailsComponent },
+     {path:'createUser',component:CreateUserComponent },
+     {path:'createAccountDetails',component:CreateAccountDetailsComponent },
+
+     
+
 
   ]},  //parent routing
 

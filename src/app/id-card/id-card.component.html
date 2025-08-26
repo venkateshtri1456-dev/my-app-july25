@@ -1,0 +1,74 @@
+<h2>Student ID Card</h2>
+
+<input type="text" gap="10px" [(ngModel)]="searchKeyword" (keyup)="search()" >
+
+<select [(ngModel)] ="columnName">
+    <option value="name">Name</option>
+    <option value="phone">Phone</option>
+    <option value="city">City</option>
+    <option value="dob">DOB</option>
+    <option value="email">Email</option>
+    <option value="school_city">School City</option>
+    <option value="school_pin">School Pin</option>
+    <option value="school_name">School Name</option>
+</select>
+
+<select [(ngModel)] ="orderName">
+    <option value="asc">Ascending order</option>
+    <option value="desc">Descending order</option>
+</select>
+
+
+<button class="btn btn-primary" (click)="sorting()">Sort</button>
+
+
+<select [(ngModel)]="items" >
+    <option value="5">5</option>
+    <option value="10">10</option>
+    <option value="15">15</option>
+</select>
+
+<select [(ngModel)]="pageNumbers" >
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+</select>
+
+<button class="btn btn-primary" (click)="pagination()" >Submit</button>
+
+<button class="btn btn-info" (click)="create()">Create</button>
+
+<div class="parent" >
+
+
+    <div class="card"  *ngFor="let student of cards">
+        <div class="top">
+            <div class="topleft">
+          <img src="{{student.school_logo}}" alt="" width="60px" height="50px">
+            </div>
+            <div class="topright">
+              <h3>{{student.school_name}}</h3>
+ </div>
+        </div>
+        <div class="middle">
+            <div class="middleleft">
+            <p>Name : {{student.name}}</p>
+            <p>Phone : {{student.phone}}</p>
+            <p>City : {{student.city}}</p>
+            <p>D.O.B : {{student.dob}}</p>
+            <p>Email : {{student.email}}</p>
+            <p> School City : {{student.school_city}}</p>
+            <p>pin : {{student.school_pin}}</p>
+            </div>
+            <div class="middleright">
+                <img src= {{student.profile_picture}} alt="" width="100px" height="100px">
+            </div>
+        </div>
+        <div class="bottom">
+            <button class="btn btn-info">View</button>
+            <button class="btn btn-primary">Edit</button>
+            <button class="btn btn-danger" (click)="delete(student.id)">Delete</button>
+        </div>
+
+    </div>
+</div>

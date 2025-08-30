@@ -31,6 +31,13 @@ import { AddStudentsComponent } from './add-students/add-students.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateAccountDetailsComponent } from './create-account-details/create-account-details.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { ViewStudentDetailsComponent } from './view-student-details/view-student-details.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { RatingComponent } from './rating/rating.component';
 
 
 @NgModule({
@@ -61,7 +68,14 @@ import { CreateAccountDetailsComponent } from './create-account-details/create-a
     AddStudentsComponent,
     AccountDetailsComponent,
     CreateUserComponent,
-    CreateAccountDetailsComponent
+    CreateAccountDetailsComponent,
+    VehicleDetailsComponent,
+    ViewStudentDetailsComponent,
+    Sibling1Component,
+    Sibling2Component,
+    ParentComponent,
+    ChildComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,

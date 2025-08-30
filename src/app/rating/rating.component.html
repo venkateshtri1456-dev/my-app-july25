@@ -1,0 +1,16 @@
+
+
+ <!-- <h3>{{rating}}</h3>  -->
+
+ <img  *ngIf="rating >= 1 && rating < 2" src="assets/one star.jpeg" alt="1 star">
+<img *ngIf="rating >= 2 && rating < 3" src="assets/two stars.jpeg" alt="2 stars">
+<img *ngIf="rating >= 3 && rating < 4" src="assets/three stars.jpeg" alt="3 stars">
+<img *ngIf="rating >= 4 && rating < 5" src="assets/four star.jpeg" alt="4 stars">
+<img *ngIf="rating >= 5" src="assets/five stars.jpeg" alt="5 stars"> 
+
+<!-- <img *ngIf="!((rating > 1 )&& (rating < 2 ))"src="[/src/app/one star.jpeg]" alt="">
+<img src="/src/app/Two star.jpeg" alt="">
+<img src="/src/app/Three star.jpeg" alt="">
+<img src="/src/app/four star.jpeg" alt="">
+<img src="/src/app/five star.jpeg" alt=""> -->
+

@@ -7,6 +7,10 @@ import { FlipkartService } from '../flipkart.service';
   styleUrls: ['./flipkart.component.css']
 })
 export class FlipkartComponent {
+onRatingChanged(newRating:number){
+  console.log("new rating from child:", newRating);
+}
+
   flipkart:any[]=[];
   constructor(private _flipkartService:FlipkartService){
     _flipkartService.getflipkart().subscribe(
@@ -20,6 +24,8 @@ export class FlipkartComponent {
   }
 )
   }
+
+
 
 }
 

@@ -25,12 +25,18 @@ import { AddStudentsComponent } from './add-students/add-students.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateAccountDetailsComponent } from './create-account-details/create-account-details.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { ViewStudentDetailsComponent } from './view-student-details/view-student-details.component';
+import { AuthenticationGuard } from './authentication.guard';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { ParentComponent } from './parent/parent.component';
 
 
 const routes: Routes = [
-  {path:'', component:LoginComponent},    // default routing
+  // {path:'', component:LoginComponent},    // default routing
+  {path:'',component:LoginComponent},
 
-  {path:'dashboard',component:DashboardComponent ,children:[
+  {path:'dashboard',component:DashboardComponent,canActivate:[AuthenticationGuard] ,children:[
     {path:'home',component:HomeComponent},
      {path:'gallery',component:GalleryComponent}, // child routing
      {path:'welcome',component:WelcomeComponent},
@@ -54,6 +60,15 @@ const routes: Routes = [
      {path:'accountDetails',component:AccountDetailsComponent },
      {path:'createUser',component:CreateUserComponent },
      {path:'createAccountDetails',component:CreateAccountDetailsComponent },
+     {path:'vehicle-details/:id',component:VehicleDetailsComponent },
+     {path:'edit-vehicle/:id',component:CreateVehicleComponent },
+     {path:'viewStudentDetails/:id',component:ViewStudentDetailsComponent },
+     {path:'editStudentDetails/:id',component:AddStudentsComponent },
+     {path:'sibling',component:Sibling1Component },
+     {path:'parent',component:ParentComponent },
+     
+
+
 
      
 

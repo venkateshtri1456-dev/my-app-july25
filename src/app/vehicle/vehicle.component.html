@@ -36,7 +36,7 @@
 <button class="btn btn-success" (click)="pagination()">Pagination</button>
 
 
-
+<button class="btn btn-success"  (click)="create()">Create</button>
 
 
 
@@ -54,7 +54,8 @@
             <th>Cost</th>
             <th>Tyres</th>
             <th>ID</th>
-            <th>Actions</th>
+            <th colspan="2">Actions</th>
+
         </tr>
     </thead>
     <tbody>
@@ -76,6 +77,14 @@
                 <button class="btn btn-danger" (click)="delete(vehicles.id)">Delete</button>
             </td>
 
+            <!-- view -->
+<td>
+    <button class="btn btn-warning" routerLink="/dashboard/vehicle-details/{{vehicles.id}}">View</button> <!--specific data view -26/08/2025-->
+</td>
+
+<td>
+    <button class="btn btn-warning" routerLink="/dashboard/edit-vehicle/{{vehicles.id}}">Edit</button>
+</td>
         </tr>
     </tbody>
 </table>

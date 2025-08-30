@@ -68,8 +68,8 @@ export class IdCardComponent {
   )
   }
 create(){
+
   this._router.navigateByUrl('/dashboard/addStudents');
-  
 }
 
 delete(id:any) {

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { VehicleService } from '../vehicle.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-vehicle',
@@ -9,7 +10,7 @@ import { VehicleService } from '../vehicle.service';
 export class VehicleComponent {
   vehicle:any[]=[];
 
-  constructor(private _vehicleService:VehicleService)
+  constructor(private _vehicleService:VehicleService, private _router:Router)
   {
 
   this.loadvehicle();
@@ -83,4 +84,9 @@ this.loadvehicle();
   alert("you have cancelled the delete")
 }
 }
+
+create(){
+ this._router.navigateByUrl('/dashboard/create-vehicle')
+}
+
 }

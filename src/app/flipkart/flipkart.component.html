@@ -3,16 +3,17 @@
   <img src={{cards.image}}  alt="" width="250px" height="200px">
 
   <h4>{{cards.category}}</h4>
+   
   <h5 style="color:rgba(2,73,165)">{{cards.title}}</h5>
   <h5 style="color:red;">  Rs.{{cards.price}}</h5>
   <!-- <h5 style="color:greenyellow;"> {{cards.description}}</h5> -->
 
-     
+      <h5 class="rate">
+        <app-rating [rating]="cards.rating.rate"></app-rating> 
+</h5>
 
    <!-- <input class="rate" type="number" [(ngModel)]="cards.rating.rate">  -->
-
-        <app-rating [rating]="cards.rating.rate" (ratingClicked)="onRatingChanged($event)"></app-rating> 
-
+   
                 <!-- <h5  class="rate"> {{cards.rating.rate}} / {{cards.rating.count}} </h5> -->
 
 

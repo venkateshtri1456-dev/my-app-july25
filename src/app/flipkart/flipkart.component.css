@@ -27,10 +27,10 @@
     height:35px;
     color:grey;
     position: absolute;
-    background-color: aqua;
     position: absolute;
     margin-top: 200px;
     margin-left: 190px;
+    object-fit: cover;
 
     
 }

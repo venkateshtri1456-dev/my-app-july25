@@ -38,6 +38,7 @@ import { Sibling2Component } from './sibling2/sibling2.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { RatingComponent } from './rating/rating.component';
+import { AboutUsModule } from './about-us/about-us.module';
 
 
 @NgModule({
@@ -83,6 +84,7 @@ import { RatingComponent } from './rating/rating.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AboutUsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

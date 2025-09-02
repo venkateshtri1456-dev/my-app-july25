@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormArray, FormControl, FormGroup, MaxLengthValidator, Validators } from '@angular/forms';
+import { appleMail } from '../validators';
 
 @Component({
   selector: 'app-create-user',
@@ -9,15 +10,15 @@ import { FormArray, FormControl, FormGroup, MaxLengthValidator, Validators } fro
 export class CreateUserComponent {
 public userForm:FormGroup=new FormGroup({
   name:new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(10)]),
-  email:new FormControl(),
-  password:new FormControl(),
-  mobile:new FormControl(),
+  email:new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(20),appleMail]),
+  password:new FormControl('',[Validators.required]),
+  mobile:new FormControl('',[Validators.required]),
   address:new FormGroup({
-    city:new FormControl(),
-    state:new FormControl(),
-    pincode:new FormControl(),
+    city:new FormControl('',[Validators.required]),
+    state:new FormControl('',[Validators.required]),
+    pincode:new FormControl('',[Validators.required]),
   }),
-  type:new FormControl(),
+  type:new FormControl('',[Validators.required]),
   // busFee:new FormControl(),
   // hostelFee:new FormControl(),
 
@@ -62,4 +63,12 @@ constructor(){
 submit(){
   console.log(this.userForm.value);
 }
+
+// limitText(event: any): void {
+//     const input = event.target as HTMLTextAreaElement;
+//     if (input.value.length > 50) {
+//       input.value = input.value.substring(0, 50); // keep only first 30 chars
+//       this.userForm.get('message')?.setValue(input.value); // sync with form
+//     }
+//   }
 }

@@ -9,7 +9,12 @@ export class VehicleService {
 
   // optimization --  means simpfly , apiUrl or baseUrl temp variable anything can use. (28/08/2025).
 
+
   apiUrl='https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction'; 
+
+  // Dummy Json-Custom API
+
+  // apiUrl='/assets/data.json' 
 
   constructor( private _httpClient:HttpClient) { }  // first will be loading -constructor
   getVehicle():Observable<any>{

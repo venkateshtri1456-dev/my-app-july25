@@ -1,6 +1,9 @@
 <div class="parent">
 <div class="card" style="width: 18rem;" *ngFor="let cards of flipkart ">
-  <img src={{cards.image}}  alt="" width="250px" height="200px">
+  <img src={{cards.image}}  alt="" width="250px" height="200px" >
+    <h5 class="rate">
+        <app-rating [rating]="cards.rating.rate"></app-rating> 
+</h5>
 
   <h4>{{cards.category}}</h4>
    
@@ -8,9 +11,7 @@
   <h5 style="color:red;">  Rs.{{cards.price}}</h5>
   <!-- <h5 style="color:greenyellow;"> {{cards.description}}</h5> -->
 
-      <h5 class="rate">
-        <app-rating [rating]="cards.rating.rate"></app-rating> 
-</h5>
+    
 
    <!-- <input class="rate" type="number" [(ngModel)]="cards.rating.rate">  -->
    

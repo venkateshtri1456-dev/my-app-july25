@@ -2,7 +2,7 @@
 
 <form  [formGroup]="userForm" >
     <label>Name:</label>
-    <input type="text" formControlName="name"><br>
+    <input type="text" formControlName="name" appCapital><br>
 
     <div *ngIf="userForm.get('name')?.touched && userForm.get('name')?.invalid">
         <p *ngIf="userForm.get('name')?.errors?.['required']">Name is Required</p>
@@ -12,7 +12,14 @@
     </div>
 
       <label>Email:</label>
-    <input type="email" formControlName="email"><br>
+    <input type="email" formControlName="email" ><br>
+
+    <div *ngIf="userForm.get('email')?.touched && userForm.get('email')?.invalid">
+     <p *ngIf="userForm.get('email')?.errors?.['required']">Email is Required</p>
+        <p *ngIf="userForm.get('email')?.errors?.['minlength']">Email is minimum 6 characters</p>
+        <p *ngIf="userForm.get('email')?.errors?.['maxlength']">Email is maximum 20 characters</p>
+        <p *ngIf="userForm.get('email')?.errors?.['appleMail']">Please use Apple mail only</p>
+</div>
 
       <label>Password:</label>
     <input type="password" formControlName="password"><br>
@@ -70,7 +77,19 @@
  </div>
 <!-- Form Array -->
 
-    <button (click)="submit()" class="btn btn-success">Submit</button>
+    <button (click)="submit()" [disabled]="!userForm.valid" class="btn btn-success">Submit</button><br>
 
+ <!-- <div>
+    <label>Message (max 50 chars):</label>
+    <textarea 
+     formControlName="message" 
+      (input)="limitText($event)" 
+      rows="3">
+    </textarea>
+    <p>{{ userForm.get('message')?.value?.length || 0 }}/50</p>
+  </div> -->
+
+  <label>Message</label>
+  <textarea name="message" id=""></textarea>
 
 </form>

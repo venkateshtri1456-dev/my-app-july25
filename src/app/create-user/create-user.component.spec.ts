@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';   // ✅ add this
+import { HttpClientTestingModule } from '@angular/common/http/testing'; // if service is used
 
 import { CreateUserComponent } from './create-user.component';
 
@@ -8,7 +10,11 @@ describe('CreateUserComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CreateUserComponent ]
+      declarations: [ CreateUserComponent ],
+      imports:[
+        ReactiveFormsModule,    // ✅ fix here
+        HttpClientTestingModule // if your component calls APIs
+      ]
     })
     .compileComponents();
 

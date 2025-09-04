@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateAccountDetailsComponent } from './create-account-details.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('CreateAccountDetailsComponent', () => {
   let component: CreateAccountDetailsComponent;
@@ -8,7 +10,14 @@ describe('CreateAccountDetailsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CreateAccountDetailsComponent ]
+      declarations: [ CreateAccountDetailsComponent ],
+            imports: [HttpClientTestingModule,
+               ReactiveFormsModule,
+            ],
+
+                  // 👈 Add this
+   // ✅ provide mock HttpClient
+
     })
     .compileComponents();
 

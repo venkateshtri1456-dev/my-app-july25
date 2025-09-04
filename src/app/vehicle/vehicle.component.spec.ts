@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { VehicleComponent } from './vehicle.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { VehicleService } from '../vehicle.service';
+import { FormsModule } from '@angular/forms';
 
 describe('VehicleComponent', () => {
   let component: VehicleComponent;
@@ -8,7 +11,11 @@ describe('VehicleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VehicleComponent ]
+      declarations: [ VehicleComponent ],
+      imports: [HttpClientTestingModule,
+        FormsModule,
+      ],   // 👈 add this
+      providers: [VehicleService]
     })
     .compileComponents();
 

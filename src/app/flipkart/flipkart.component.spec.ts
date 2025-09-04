@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';  // ✅ add this
 
 import { FlipkartComponent } from './flipkart.component';
+import { FlipkartService } from '../flipkart.service';
+
 
 describe('FlipkartComponent', () => {
   let component: FlipkartComponent;
@@ -8,6 +11,8 @@ describe('FlipkartComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+            imports: [HttpClientTestingModule],   // ✅ fix here
+      providers: [FlipkartService] ,         // ✅ provide service
       declarations: [ FlipkartComponent ]
     })
     .compileComponents();

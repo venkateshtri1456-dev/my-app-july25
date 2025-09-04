@@ -24,7 +24,6 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MailComponent } from './mail/mail.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { PinInterestComponent } from './pin-interest/pin-interest.component';
-import { WeatherComponent } from './weather/weather.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { IdCardComponent } from './id-card/id-card.component';
 import { AddStudentsComponent } from './add-students/add-students.component';
@@ -42,6 +41,10 @@ import { AboutUsModule } from './about-us/about-us.module';
 import { CapitalDirective } from './capital.directive';
 import { RupeePipe } from './rupee.pipe';
 import { TokenInterceptor } from './token.interceptor';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterialComponent } from './angular-material/angular-material.component';
+import {MatBadgeModule} from '@angular/material/badge';
+
 
 
 @NgModule({
@@ -66,7 +69,6 @@ import { TokenInterceptor } from './token.interceptor';
     MailComponent,
     FlipkartComponent,
     PinInterestComponent,
-    WeatherComponent,
     CreateVehicleComponent,
     IdCardComponent,
     AddStudentsComponent,
@@ -81,7 +83,8 @@ import { TokenInterceptor } from './token.interceptor';
     ChildComponent,
     RatingComponent,
     CapitalDirective,
-    RupeePipe
+    RupeePipe,
+    AngularMaterialComponent,
   ],
   imports: [
     BrowserModule,
@@ -90,6 +93,8 @@ import { TokenInterceptor } from './token.interceptor';
     HttpClientModule,
     ReactiveFormsModule,
     AboutUsModule,
+    BrowserAnimationsModule,
+    MatBadgeModule
   ],
   providers: [
     {

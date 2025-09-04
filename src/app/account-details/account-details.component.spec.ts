@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AccountDetailsComponent } from './account-details.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
+import { IdCardService } from '../id-card.service';
 
 describe('AccountDetailsComponent', () => {
   let component: AccountDetailsComponent;
@@ -8,7 +12,17 @@ describe('AccountDetailsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AccountDetailsComponent ]
+      declarations: [ AccountDetailsComponent ],
+            imports:[
+              [HttpClientTestingModule], 
+                FormsModule,            // ✅ required for [(ngModel)]
+        ReactiveFormsModule,
+                RouterTestingModule,
+                 ],
+      providers: [IdCardService]
+                                              // ✅ if you also use formGroup / formControl
+                                            // 👈 Add this
+
     })
     .compileComponents();
 

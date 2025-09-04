@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CircleComponent } from './circle.component';
+import { FormsModule } from '@angular/forms';
 
 describe('CircleComponent', () => {
   let component: CircleComponent;
@@ -8,7 +9,9 @@ describe('CircleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CircleComponent ]
+      declarations: [ CircleComponent ],
+            imports: [FormsModule]   // ✅ needed for ngModel
+
     })
     .compileComponents();
 

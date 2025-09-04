@@ -29,6 +29,7 @@ import { ViewStudentDetailsComponent } from './view-student-details/view-student
 import { AuthenticationGuard } from './authentication.guard';
 import { Sibling1Component } from './sibling1/sibling1.component';
 import { ParentComponent } from './parent/parent.component';
+import { AngularMaterialComponent } from './angular-material/angular-material.component';
 
 
 const routes: Routes = [
@@ -64,6 +65,8 @@ const routes: Routes = [
      {path:'editStudentDetails/:id',component:AddStudentsComponent },
      {path:'sibling',component:Sibling1Component },
      {path:'parent',component:ParentComponent },
+     {path:'angularMaterial',component:AngularMaterialComponent },
+     
       {
     path:'payments',
     loadChildren: ()=> import('./payments/payments.module').then(m=> m.PaymentsModule)

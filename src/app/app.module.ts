@@ -42,6 +42,9 @@ import { CapitalDirective } from './capital.directive';
 import { RupeePipe } from './rupee.pipe';
 import { TokenInterceptor } from './token.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterialComponent } from './angular-material/angular-material.component';
+import {MatBadgeModule} from '@angular/material/badge';
+
 
 
 @NgModule({
@@ -80,7 +83,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ChildComponent,
     RatingComponent,
     CapitalDirective,
-    RupeePipe
+    RupeePipe,
+    AngularMaterialComponent,
   ],
   imports: [
     BrowserModule,
@@ -90,6 +94,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     AboutUsModule,
     BrowserAnimationsModule,
+    MatBadgeModule
   ],
   providers: [
     {

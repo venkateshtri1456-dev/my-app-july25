@@ -11,14 +11,14 @@ export class CreateUserComponent {
 public userForm:FormGroup=new FormGroup({
   name:new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(10)]),
   email:new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(20),appleMail]),
-  password:new FormControl('',[Validators.required]),
-  mobile:new FormControl('',[Validators.required]),
+  password:new FormControl(),
+  mobile:new FormControl(),
   address:new FormGroup({
-    city:new FormControl('',[Validators.required]),
-    state:new FormControl('',[Validators.required]),
-    pincode:new FormControl('',[Validators.required]),
+    city:new FormControl(),
+    state:new FormControl(),
+    pincode:new FormControl(),
   }),
-  type:new FormControl('',[Validators.required]),
+  type:new FormControl(),
   // busFee:new FormControl(),
   // hostelFee:new FormControl(),
 

@@ -44,6 +44,15 @@ import { TokenInterceptor } from './token.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialComponent } from './angular-material/angular-material.component';
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import { LoadingComponent } from './loading/loading.component';
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './store/counter.reducer';
+import { AdminComponent } from './admin/admin.component';
+
+
 
 
 
@@ -85,6 +94,9 @@ import {MatBadgeModule} from '@angular/material/badge';
     CapitalDirective,
     RupeePipe,
     AngularMaterialComponent,
+    LoadingComponent,
+    AdminComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -94,7 +106,13 @@ import {MatBadgeModule} from '@angular/material/badge';
     ReactiveFormsModule,
     AboutUsModule,
     BrowserAnimationsModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatButtonModule,
+    MatIconModule,
+    MatBottomSheetModule,
+    MatButtonModule,
+    StoreModule.forRoot({count:counterReducer}, {}),
+    
   ],
   providers: [
     {

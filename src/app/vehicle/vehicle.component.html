@@ -1,6 +1,6 @@
 <h1>vehicles</h1>
 
-<input type="text" [(ngModel)]="searchKeyword" (keyup)="search()" >
+<input type="text"  [formControl]="searchKeyword" (keyup)="search()" >
 
  <!-- sorting -->
 <select [(ngModel)]="columnName" >
@@ -40,8 +40,8 @@
 
 
 
-
-<table  class="table table-warning">
+<!-- <app-loading ></app-loading> -->
+<table  class="table table-warning" >
     <thead>
         <tr>
             <th>Vehicle</th>
@@ -58,8 +58,10 @@
 
         </tr>
     </thead>
-    <tbody>
-        <tr *ngFor= "let vehicles of vehicle">
+    <tbody >
+     
+        <tr *ngFor= "let vehicles of vehicle"  >
+
             <td>{{vehicles.Vehicle}}  </td>
             <td>{{vehicles.manufacturer}}  </td>
             <td>{{vehicles.model}}  </td>
@@ -88,3 +90,5 @@
         </tr>
     </tbody>
 </table>
+
+<app-loading *ngIf="loading"></app-loading> <!--new line-08/09/2025-->

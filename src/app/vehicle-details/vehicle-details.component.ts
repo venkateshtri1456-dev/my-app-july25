@@ -19,7 +19,7 @@ constructor(private _activatedRoute:ActivatedRoute, private _VehicleService:Vehi
     _VehicleService.getSingleVehicle(this.id).subscribe((data:any)=>{
       console.log(data);
       this.vehicle=data;
-    },(errpr:any)=>{
+    },(err:any)=>{
       alert("Internal Server Error!");
     }
   )

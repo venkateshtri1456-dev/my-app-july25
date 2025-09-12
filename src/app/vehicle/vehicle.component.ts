@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { VehicleService } from '../vehicle.service';
 import { Router } from '@angular/router';
+import { FormControl } from '@angular/forms';
+import { debounce, debounceTime, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-vehicle',
@@ -8,19 +10,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./vehicle.component.css']
 })
 export class VehicleComponent {
+  loading:boolean=true;  // new line-08-09/2025
   vehicle:any[]=[];
 
-  constructor(private _vehicleService:VehicleService, private _router:Router)
+  constructor(private _vehicleService:VehicleService, private _router:Router,)
   {
 
   this.loadvehicle();
   }
+
+
+  
 
   loadvehicle(){
    this._vehicleService.getVehicle().subscribe(
       (data:any)=>{
         console.log(data);
         this.vehicle=data;
+        this.loading=false;  //  new line -08/09/2025
         console.log("vehicle data:",this.vehicle);
       },(err:any)=>{
         alert("Internal Server Error");
@@ -28,10 +35,14 @@ export class VehicleComponent {
     
     )
   }
-  searchKeyword:string='';
+  // searchKeyword:string='';
+  searchKeyword=new FormControl();   // search optimazation --10-09-2025
   search(){
     // alert(this.term)
-    this._vehicleService.getFilteredVehicle(this.searchKeyword).subscribe((data:any)=>{
+    this.searchKeyword.valueChanges.pipe(
+      debounceTime(400),
+      switchMap((search)=>this._vehicleService.getFilteredVehicle(search)))
+    .subscribe((data:any)=>{
       console.log(data);
       this.vehicle=data;
     },(err:any)=>{

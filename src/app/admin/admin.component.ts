@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
+import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { CounterState } from '../store/store';
-import { Store, select } from '@ngrx/store';
 
 @Component({
-  selector: 'app-gallery',
-  templateUrl: './gallery.component.html',
-  styleUrls: ['./gallery.component.css']
+  selector: 'app-admin',
+  templateUrl: './admin.component.html',
+  styleUrls: ['./admin.component.css']
 })
-export class GalleryComponent {
+export class AdminComponent {
   count:Observable<number>;
   constructor(private _store:Store<CounterState>){
     this.count=_store.pipe(select('count'));
